@@ -59,6 +59,11 @@ rerun_options_parse "$@"
 # Command implementation
 # ----------------------
 
+[[ ! -f $FILE ]] && {
+	rerun_log warn "Nothing to rotate. File does not exist: $FILE"
+	exit 0
+}
+
 DIRNAME=$(dirname $FILE)
 
 TSTAMP=$(date "$TSTAMP_FORMAT")
