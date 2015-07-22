@@ -1,0 +1,15 @@
+lang: c
+script: "./travis-ci.sh"
+notifications:
+  irc:
+  - irc.freenode.org#rerun
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install -qq markdown
+- sudo apt-get install -qq build-essential
+- sudo apt-get install -qq devscripts
+- sudo apt-get install -qq dh-make
+- sudo apt-get install -qq rpm
+env:
+  global:
+    secure: OyGoQ/xsui2hNtiIJZv9CbHntSwewzVsJ+ekEUq7WHrx7lgwva8OxCJNxWPorhUFKkCXCMGFbAfLJxcWI2CWs1k2EKDA1rC+U17j471DxsV8em5YDT2NqLOkCArd9T+njdM1IqTRfueJQZrVo6Vczdw0ch96szm/AJQ/g+4XplH1du2pXYfdb7GMPRdVDZlX2odugnhcQeszssJ34zv71//Hx5LWyveTlpXjlX1YInQmXvaOrdgdMkT6ZLLtYW/oPrVWyKEE3cqlPGkxN4C9aa/1igbsAYNKqNXZZqnpDghc5SDPjLEv2U/lIiMB4t2WpUdRbDWOqTNZQIyhnaqHX7jXR28C88iS7lKlKWDgImzQkl6kkLeflUQ33YxN7yesAWiBpX+Uy35u8jTNvwEmqxDXmNlVFeLjwi/qMl62xs/Pkacp6eodxXYmfYDW8PjYHNN25IUEA8QD/X9Swb3y7KrssXUvTXYv5/aIKhqzvIfLm84yGbjZT1cSPs3s7Zg7R7B2bEcJbxYiiUA0NFnWMIhiPS6DxHrxUUfQDo3gLxvzI6F1PCY/IBptqnQrgtpQt6Mfw4xX3jyC8eXh6Z4dqVtdVZytMGHcAyLl6qrD+29ZyuXnEvQuYs8Vq3up1aoyC5CtWrMEw7gW1BNyV6agI2HQgJYXE9aWofZaJFB6/iQ=
